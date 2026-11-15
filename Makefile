@@ -26,7 +26,7 @@ CONTENTID := UP0001-$(APPID)_00-0000000000000000
 
 CFLAGS   = -O3 -ffast-math -Wall -std=gnu99 -mcpu=cell -mtune=cell $(MACHDEP) $(INCLUDE)
 LDFLAGS  = $(MACHDEP) -Wl,-Map,$(notdir $@).map
-LIBS     := -lrsx -lgcm_sys -lio -lsysutil -lrt -llv2 -lm
+LIBS     := -lrsx -lgcm_sys -lio -lsysutil -laudio -lrt -llv2 -lm
 
 ifeq ($(SUBBUILD),)
 

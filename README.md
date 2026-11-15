@@ -1,10 +1,17 @@
 # blox-ps3
 
-Baseplate + noob prototype for PS3 (PSL1GHT, runs on the Cell PPE).
-Left stick = move, right stick = camera, X = jump, L2 = sprint.
-START = pause menu (Resume / Restart / Skins). In menus: D-pad or left stick up/down, X = select, O = back.
-7 costumes (NOOB, RED, ZOMBIE, NINJA, ROBOT, PINK, GOLD); the jump pose raises the arms.
-Your skin is saved automatically to `/dev_hdd0/game/BLOX00001/USRDIR/blox-ps3.sav` and `/dev_hdd0/tmp/blox-ps3.sav` and loaded on startup. Delete both files to reset it.
+Blox PS3 prototype (PSL1GHT, runs on the Cell PPE).
+Controls: left stick = move, right stick = camera, X = jump, L2 = sprint, START = pause menu.
+Menus: D-pad or left stick, L1/R1 = tabs, X = select, O = back.
+
+- **Main menu** (Xbox-dashboard style): PLAY, MAPS, SKINS, AVATAR, SETTINGS, QUIT.
+- **Maps:** Baseplate, Castle (walls, towers, stairs to the wall walk, drawbridge, keep).
+- **Skins:** 11 presets (NOOB, RED, ZOMBIE, NINJA, ROBOT, PINK, GOLD, TOP HAT MAN, SKATER BOY, KING, SNOW) + CUSTOM.
+- **Avatar creator:** hat (top hat, skater cap, beanie, crown, headband, antenna), hat/skin/shirt/pants colours, face, randomize, reset.
+- **Settings:** control tips, FPS counter, FPS in menus, sound, FPS cap (15/30/45/60/uncapped/custom).
+- **Sound:** walk, jump and landing effects (synthesized, no audio files).
+- Player models are drawn with culling disabled (`PLAYER_CULL 0` in `source/main.c`).
+- Everything is saved to `/dev_hdd0/game/BLOX00001/USRDIR/blox-ps3.sav` and `/dev_hdd0/tmp/blox-ps3.sav`.
 
 ## Build
 Dependencies (Docker) are installed automatically the first time if missing.
